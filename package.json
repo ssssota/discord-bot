@@ -1,10 +1,14 @@
 {
-  "name": "discord-bot",
+  "name": "dbsc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Discord Bot Simple Commander",
   "main": "discordbot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/index",
+    "tsc": "tsc",
+    "tsc:init": "tsc --init",
+    "tsc:watch": "tsc --watch",
+    "prepare": "tsc"
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,13 @@
   },
   "homepage": "https://github.com/ssssota/discord-bot#readme",
   "dependencies": {
-    "discord.js": "^11.5.1",
-    "shell-quote": "^1.7.1"
+    "@types/shell-quote": "^1.6.1",
+    "@types/ws": "^7.2.4",
+    "discord.js": "^12.2.0",
+    "shell-quote": "^1.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "typescript": "^3.8.3"
   }
 }
