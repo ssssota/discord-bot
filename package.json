@@ -2,7 +2,7 @@
   "name": "dbsc",
   "version": "1.0.1",
   "description": "Discord Bot Simple Commander",
-  "main": "discordbot.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index",
     "tsc": "tsc",
