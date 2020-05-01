@@ -11,13 +11,10 @@ export default class DiscordBot {
     this.client = new Discord.Client();
   }
 
-  on(event: ClientEvent, callback: any) {
-    if (event === 'message') {
-      this.client.on(event, msg => {
-        callback.call(this.client, parse(msg.content), msg);
-      });
-    }
-    this.client.on(event, callback.bind(this.client));
+  on(event: 'command', callback: (command: ShellQuote.ParseEntry[], message: Discord.Message) => void) {
+    this.client.on('message', msg => {
+      callback.call(this.client, parse(msg.content), msg);
+    });
   }
 
   run() {
